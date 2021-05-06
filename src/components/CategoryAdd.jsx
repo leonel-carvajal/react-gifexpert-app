@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const CategoryAdd = ({ setCategories }) => {
-	const [inputValue, setInputValue] = useState("");
+	const [inputValue, setInputValue] = useState('');
 
 	const handleInputChange = (e) => {
 		setInputValue(e.target.value);
@@ -10,10 +10,11 @@ const CategoryAdd = ({ setCategories }) => {
 	const hanldeSubmit = (e) => {
 		e.preventDefault();
 		if (inputValue.trim().length > 2) {
-			setCategories((cat) => [...cat, inputValue]);
-			setInputValue("");
+			setCategories((cat) => [inputValue,...cat]);
+			setInputValue('');
 		}
 	};
+
 	return (
 		<>
 			<form onSubmit={hanldeSubmit}>
@@ -27,6 +28,7 @@ const CategoryAdd = ({ setCategories }) => {
 		</>
 	);
 };
+
 CategoryAdd.propTypes = {
 	setCategories: PropTypes.func.isRequired,
 };

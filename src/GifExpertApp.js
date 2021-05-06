@@ -3,14 +3,9 @@ import {nanoid} from 'nanoid'
 import CategoryAdd from './components/CategoryAdd';
 import GifGrid from './components/GifGrid';
 
-//Api key: nA3po3gSKPi9NoXIXqWqqz9OGeiSwfhO
+
 const GifExpertApp = () => {
-  //const categorys = ['One Punchg','Samurai X','Dragon Ball']
   const [categories, setCategories] = useState(['Dragon Ball']);
-  // const handleAdd = ()=>{
-  //   setCategories([...categories,'Hunter'])
-  //   //setCategories(cats=>[...cats,categories])
-  // }
   return (
     <>
       <h2>Gif Expert App </h2>
