@@ -5,13 +5,13 @@ import GifGrid from './components/GifGrid';
 
 
 const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['Dragon Ball']);
+  const [categories, setCategories] = useState(['']);
   return (
     <>
-      <h2>Gif Expert App </h2>
+      <h1>Gif Expert App </h1>
       <CategoryAdd setCategories={setCategories}/>
       <hr/> 
-      <ol>
+      <ol className='animate__fadeIn animate__slow'>
         {
           categories.map(category=>(
             <GifGrid category={category} key={nanoid()}/>
