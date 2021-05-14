@@ -1,7 +1,5 @@
-import React from 'react'
-
+import React from 'react';
 const GifGridItem = ({title,url}) => {
-
   return (
     <div className='card'>
       <div className="card__header">
